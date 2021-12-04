@@ -1,5 +1,6 @@
 package com.ubaya.protectcare50
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -34,7 +35,8 @@ class LoginActivity : AppCompatActivity() {
                         val obj = JSONObject(it)
                         if (obj.getString("result") == "OK"){
                             Toast.makeText(this, "LOGIN SUCCESS", Toast.LENGTH_SHORT).show()
-
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
                         }else{
                             Toast.makeText(this, "LOGIN FAILED. Username or Password is wrong", Toast.LENGTH_SHORT).show()
                         }
