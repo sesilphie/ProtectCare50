@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
-                android:text="PROFILE FRAGMENT"
+                android:text="PROFILE"
                 android:textAppearance="@style/heading1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
