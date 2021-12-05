@@ -2,10 +2,13 @@ package com.ubaya.protectcare50
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_check_in.*
 
 class MainActivity : AppCompatActivity() {
     val fragments: ArrayList<Fragment> = ArrayList()
@@ -34,5 +37,11 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+
+        //create array adapter spinner
+        val adapter = ArrayAdapter(this, R.layout.myspinner_layout, GlobalData.place)
+        adapter.setDropDownViewResource(R.layout.myspinner_item_layout)
+        //spinnerPlace.adapter = adapter
+
     }
 }

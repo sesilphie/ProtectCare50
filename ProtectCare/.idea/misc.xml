@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/activity_main.xml" value="0.1802536231884058" />
-        <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/fragment_check_in.xml" value="0.33" />
+        <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/fragment_check_in.xml" value="0.18" />
         <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/fragment_profile.xml" value="0.18" />
         <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/myspinner_item_layout.xml" value="0.19021739130434784" />
+        <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/myspinner_layout.xml" value="0.14719202898550723" />
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
