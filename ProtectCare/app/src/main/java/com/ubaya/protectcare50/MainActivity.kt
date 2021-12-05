@@ -38,10 +38,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        //create array adapter spinner
-        val adapter = ArrayAdapter(this, R.layout.myspinner_layout, GlobalData.place)
-        adapter.setDropDownViewResource(R.layout.myspinner_item_layout)
-        //spinnerPlace.adapter = adapter
+
 
     }
 }

@@ -26,6 +26,7 @@ class LoginActivity : AppCompatActivity() {
             } else if (password == ""){
                 Toast.makeText(this, "Please input Password", Toast.LENGTH_SHORT).show()
             } else{
+
                 val queue = Volley.newRequestQueue(this)
                 val url = "https://ubaya.fun/native/160819027/uas/login_protectCare50.php"
                 val stringRequest = object : StringRequest(
@@ -34,6 +35,10 @@ class LoginActivity : AppCompatActivity() {
                         Log.d("checkparams", it)
                         val obj = JSONObject(it)
                         if (obj.getString("result") == "OK"){
+                            val data = obj.getJSONObject("data")
+                            with(data){
+                                GlobalData.user = User(getString("username"), getString("password"), getString("vaccine_doses"))
+                            }
                             Toast.makeText(this, "LOGIN SUCCESS", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)

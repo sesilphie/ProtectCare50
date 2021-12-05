@@ -44,14 +44,14 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/txtCode"
+                app:layout_constraintBottom_toTopOf="@+id/textCode"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtCode"
+                android:id="@+id/textCode"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView4">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/inputCode"
+                    android:id="@+id/textInputCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:layout_editor_absoluteX="16dp"
@@ -87,11 +87,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtCode"
+                app:layout_constraintTop_toBottomOf="@+id/textCode"
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button
-                android:id="@+id/btnCheckIn"
+                android:id="@+id/buttonCheckIn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
