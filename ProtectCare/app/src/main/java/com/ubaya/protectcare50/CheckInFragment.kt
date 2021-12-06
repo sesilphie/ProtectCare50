@@ -17,6 +17,8 @@ import kotlinx.android.synthetic.main.activity_login.view.*
 import kotlinx.android.synthetic.main.fragment_check_in.*
 import kotlinx.android.synthetic.main.fragment_check_in.view.*
 import org.json.JSONObject
+import java.text.SimpleDateFormat
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -76,6 +78,9 @@ class CheckInFragment : Fragment() {
 
         view.buttonCheckIn.setOnClickListener {
             val inputCode = textInputCode.text.toString()
+            val formatter = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+            val date = Calendar.getInstance().time
+            val currentDate = formatter.format(date)
             if (inputCode == ""){
                 Toast.makeText(context, "Please input Unique Code", Toast.LENGTH_SHORT).show()
             }else{
@@ -102,7 +107,8 @@ class CheckInFragment : Fragment() {
                         }
                     ){
                         override fun getParams(): MutableMap<String, String> {
-                            return hashMapOf("code" to inputCode)
+                            return hashMapOf("code" to inputCode, "username" to GlobalData.user.username,
+                                "vaccine" to GlobalData.user.vaccine_doses,"checkIn" to currentDate)
                         }
                     }
                     queue.add(stringRequest)
@@ -113,6 +119,8 @@ class CheckInFragment : Fragment() {
             }
         }
         return view
+
+
     }
 
     companion object {

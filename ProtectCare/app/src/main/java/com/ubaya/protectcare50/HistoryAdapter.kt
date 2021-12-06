@@ -25,9 +25,9 @@ class HistoryAdapter(val histories: ArrayList<History>):RecyclerView.Adapter<His
                 }
             }
             for (i in 0 until GlobalData.history.size){
-                if (history.vaccineDoses == GlobalData.history[i].vaccineDoses){
+                if (history.vaccineDoses=="1"){
                     cardListHistory.setCardBackgroundColor(Color.parseColor("#fff176"))
-                } else{
+                } else if (history.vaccineDoses=="2"){
                     cardListHistory.setCardBackgroundColor(Color.parseColor("#81c784"))
                 }
             }
