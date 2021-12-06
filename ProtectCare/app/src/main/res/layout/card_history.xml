@@ -4,15 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardHistory"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:elevation="5dp">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardListHistory"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +27,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/txtPlace"
+                android:id="@+id/textPlaceCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -35,40 +39,40 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/textlabelCheckInCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Check In : "
-                app:layout_constraintStart_toStartOf="@+id/txtPlace"
-                app:layout_constraintTop_toBottomOf="@+id/txtPlace" />
+                app:layout_constraintStart_toStartOf="@+id/textPlaceCard"
+                app:layout_constraintTop_toBottomOf="@+id/textPlaceCard" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/textLabelCheckOutCard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Check Out : "
-                app:layout_constraintStart_toStartOf="@+id/textView8"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                app:layout_constraintStart_toStartOf="@+id/textlabelCheckInCard"
+                app:layout_constraintTop_toBottomOf="@+id/textlabelCheckInCard" />
 
             <TextView
-                android:id="@+id/txtHistoryCheckIn"
+                android:id="@+id/textHistoryCheckIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Monday, 2021-11-11 17:08"
-                app:layout_constraintStart_toEndOf="@+id/textView8"
-                app:layout_constraintTop_toTopOf="@+id/textView8" />
+                app:layout_constraintStart_toEndOf="@+id/textlabelCheckInCard"
+                app:layout_constraintTop_toTopOf="@+id/textlabelCheckInCard" />
 
             <TextView
-                android:id="@+id/txtHistoryCheckOut"
+                android:id="@+id/textHistoryCheckOut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Monday, 2021-11-11 17:08"
-                app:layout_constraintStart_toEndOf="@+id/textView10"
-                app:layout_constraintTop_toTopOf="@+id/textView10" />
+                app:layout_constraintStart_toEndOf="@+id/textLabelCheckOutCard"
+                app:layout_constraintTop_toTopOf="@+id/textLabelCheckOutCard" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

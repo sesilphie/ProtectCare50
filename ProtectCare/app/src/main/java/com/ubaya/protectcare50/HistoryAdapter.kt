@@ -1,5 +1,6 @@
 package com.ubaya.protectcare50
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,9 +19,19 @@ class HistoryAdapter(val histories: ArrayList<History>):RecyclerView.Adapter<His
     override fun onBindViewHolder(holder: HistoryViewHolder, position: Int) {
         val history = histories[position]
         with(holder.view){
-            txtPlace.text=history.placeName
-            txtHistoryCheckIn.text=history.checkIn
-            txtHistoryCheckOut.text=history.checkOut
+            for (i in 0 until GlobalData.place.size){
+                if (history.placeCode == GlobalData.place[i].code){
+                    textPlaceCard.text = GlobalData.place[i].placeName
+                }
+            }
+            textHistoryCheckIn.text=history.checkIn
+            textHistoryCheckOut.text=history.checkOut
+            if (GlobalData.user.vaccine_doses == "1"){
+                //cardListHistory.setBackgroundColor(Color.parseColor("#fff176"))
+                cardListHistory.setCardBackgroundColor(Color.parseColor("#fff176"))
+            } else{
+                cardListHistory.setCardBackgroundColor(Color.parseColor("#81c784"))
+            }
         }
     }
 

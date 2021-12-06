@@ -102,7 +102,7 @@ class CheckInFragment : Fragment() {
                         }
                     ){
                         override fun getParams(): MutableMap<String, String> {
-                            return hashMapOf("code" to inputCode, "username" to GlobalData.user.username)
+                            return hashMapOf("code" to inputCode)
                         }
                     }
                     queue.add(stringRequest)

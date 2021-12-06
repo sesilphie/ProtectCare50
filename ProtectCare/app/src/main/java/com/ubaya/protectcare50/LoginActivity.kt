@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
                         if (obj.getString("result") == "OK"){
                             val data = obj.getJSONObject("data")
                             with(data){
-                                GlobalData.user = User(getString("username"), getString("password"), getString("vaccine_doses"))
+                                GlobalData.user = User(getString("username"), getString("fullName"), getString("password"), getString("vaccine_doses"))
                             }
                             Toast.makeText(this, "LOGIN SUCCESS", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this, MainActivity::class.java)
