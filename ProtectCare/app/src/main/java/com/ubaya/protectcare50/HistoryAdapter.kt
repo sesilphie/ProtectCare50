@@ -24,14 +24,15 @@ class HistoryAdapter(val histories: ArrayList<History>):RecyclerView.Adapter<His
                     textPlaceCard.text = GlobalData.place[i].placeName
                 }
             }
+            for (i in 0 until GlobalData.history.size){
+                if (history.vaccineDoses == GlobalData.history[i].vaccineDoses){
+                    cardListHistory.setCardBackgroundColor(Color.parseColor("#fff176"))
+                } else{
+                    cardListHistory.setCardBackgroundColor(Color.parseColor("#81c784"))
+                }
+            }
             textHistoryCheckIn.text=history.checkIn
             textHistoryCheckOut.text=history.checkOut
-            if (GlobalData.user.vaccine_doses == "1"){
-                //cardListHistory.setBackgroundColor(Color.parseColor("#fff176"))
-                cardListHistory.setCardBackgroundColor(Color.parseColor("#fff176"))
-            } else{
-                cardListHistory.setCardBackgroundColor(Color.parseColor("#81c784"))
-            }
         }
     }
 

@@ -52,7 +52,8 @@ class HistoryFragment : Fragment() {
                             val history = History(
                                 getString("code_place"),
                                 getString("check_in"),
-                                getString("check_out")
+                                getString("check_out"),
+                                getString("vaccine")
                             )
                             GlobalData.history.add(history)
                         }
