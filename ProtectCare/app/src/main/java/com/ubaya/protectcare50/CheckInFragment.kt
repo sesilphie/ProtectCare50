@@ -41,9 +41,10 @@ class CheckInFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        val newPlaces = arrayListOf<Place>()
         val view = inflater.inflate(R.layout.fragment_check_in, container, false)
         val selectSpinner = Place("----", "Select a place")
-        GlobalData.place.add(selectSpinner)
+        newPlaces.add(selectSpinner)
         val queue = Volley.newRequestQueue(activity)
         val url = "https://ubaya.fun/native/160819027/uas/displayPlace_protectCare50.php"
         val stringRequest = StringRequest(
@@ -60,10 +61,13 @@ class CheckInFragment : Fragment() {
                                 getString("code_place"),
                                 getString("name")
                             )
-                            GlobalData.place.add(place)
+                            newPlaces.add(place)
                         }
                     }
                     Log.d("listPlacecheck", GlobalData.place.toString())
+                    if (newPlaces != GlobalData.place){
+                        GlobalData.place = newPlaces
+                    }
                     //create array adapter spinner
                     val adapter = ArrayAdapter(view.context, R.layout.myspinner_layout, GlobalData.place)
                     adapter.setDropDownViewResource(R.layout.myspinner_item_layout)
