@@ -28,7 +28,7 @@
                 android:id="@+id/textTitleLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="96dp"
+                android:layout_marginTop="60dp"
                 android:text="Protect"
                 android:textAppearance="@style/heading1"
                 android:textColor="#68538F"
@@ -88,6 +88,8 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
                 android:hint="Username"
+                app:endIconDrawable="@drawable/ic_baseline_person_24"
+                app:endIconMode="custom"
                 app:hintAnimationEnabled="true"
                 app:hintEnabled="true"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +100,35 @@
                     android:id="@+id/textInputUsername"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
+
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:text="Don't have an account? "
+                android:textAppearance="@style/subtitle"
+                app:layout_constraintEnd_toEndOf="@+id/buttonLogin"
+                app:layout_constraintStart_toStartOf="@+id/buttonLogin"
+                app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
+
+            <Button
+                android:id="@+id/buttonRegisterLogin"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:text="REGISTER HERE"
+                android:textAppearance="@style/subtitle"
+                android:textColor="@color/pink_dark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textAccount"
+                app:layout_constraintStart_toStartOf="@+id/textAccount"
+                app:layout_constraintTop_toBottomOf="@+id/textAccount" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

@@ -44,7 +44,7 @@ class ProfileFragment : Fragment() {
             val builder = AlertDialog.Builder(view.context)
             builder.setTitle("Log Out ProtectCare50")
             builder.setMessage("Do you want to log out from ProtectCare?")
-            builder.setPositiveButton("Log out", DialogInterface.OnClickListener { dialogInterface, i ->
+            builder.setPositiveButton("Yes, I want to log out", DialogInterface.OnClickListener { dialogInterface, i ->
                 activity?.finish()
             })
             builder.setNegativeButton("Cancel",null)
