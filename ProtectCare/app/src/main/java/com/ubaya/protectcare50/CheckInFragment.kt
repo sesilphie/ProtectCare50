@@ -63,7 +63,7 @@ class CheckInFragment : Fragment() {
                             GlobalData.place.add(place)
                         }
                     }
-                    Log.d("playlistcheck", GlobalData.place.toString())
+                    Log.d("listPlacecheck", GlobalData.place.toString())
                     //create array adapter spinner
                     val adapter = ArrayAdapter(view.context, R.layout.myspinner_layout, GlobalData.place)
                     adapter.setDropDownViewResource(R.layout.myspinner_item_layout)
@@ -92,12 +92,16 @@ class CheckInFragment : Fragment() {
                         Response.Listener {
                             Log.d("checkparams", it)
                             val obj = JSONObject(it)
-                            if (obj.getString("result") == "OK"){
+                            if (obj.getString("result") == "CHECKIN"){
                                 val data = obj.getJSONObject("data")
                                 with(data){
                                     GlobalData.checkInPlace = Place(getString("code_place"), getString("name"))
                                 }
                                 Toast.makeText(context, "CHECK IN SUCCESS", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(activity, MainActivity::class.java)
+                                activity?.startActivity(intent)
+                                activity?.finish()
+
                             }else{
                                 Toast.makeText(context, "CHECK IN FAILED. invalid Unique Code $inputCode", Toast.LENGTH_SHORT).show()
                             }
@@ -117,6 +121,7 @@ class CheckInFragment : Fragment() {
                     Toast.makeText(context, "Vaccine doses must be at least 1 time", Toast.LENGTH_SHORT).show()
                 }
             }
+
         }
         return view
 
@@ -124,15 +129,6 @@ class CheckInFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CheckInFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
             CheckInFragment().apply {

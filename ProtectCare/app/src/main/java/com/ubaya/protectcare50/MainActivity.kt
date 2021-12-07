@@ -33,11 +33,8 @@ class MainActivity : AppCompatActivity() {
                 val obj = JSONObject(it)
                 if (obj.getString("result") == "OK"){
                     val data = obj.getInt("data")
-                    /*var statusUser = 0
-                    with(data){
-                        statusUser= getInt("status_checkOut")
-                    }*/
                     if(data ==1){
+
                         fragments.add(CheckInFragment())
                         fragments.add(HistoryFragment())
                         fragments.add(ProfileFragment())
@@ -51,10 +48,6 @@ class MainActivity : AppCompatActivity() {
 
                         viewPager.adapter = MyAdapter(this, fragments)
                     }
-                    //val intent = Intent(this, MainActivity::class.java)
-                    //startActivity(intent)
-                }else{
-                    Toast.makeText(this, "LOGIN FAILED. Username or Password is wrong", Toast.LENGTH_SHORT).show()
                 }
             },
             Response.ErrorListener {

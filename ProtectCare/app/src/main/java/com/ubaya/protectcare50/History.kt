@@ -1,3 +1,3 @@
 package com.ubaya.protectcare50
 
-data class History(val placeCode:String,val checkIn:String, val checkOut:String, val vaccineDoses:String)
+data class History(var namePlace:String,var checkIn:String, var checkOut:String? = null, var vaccineDoses:String)

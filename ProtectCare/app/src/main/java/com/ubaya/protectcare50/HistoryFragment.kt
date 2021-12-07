@@ -15,10 +15,7 @@ import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.fragment_history.view.*
 import org.json.JSONObject
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+
 
 /**
  * A simple [Fragment] subclass.
@@ -29,14 +26,16 @@ class HistoryFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        displayHistory()
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_history, container, false)
+    override fun onResume() {
+        super.onResume()
+        displayHistory()
+    }
+
+    private fun displayHistory() {
+        val newHistory =ArrayList<History>()
         val queue = Volley.newRequestQueue(activity)
         val url = "https://ubaya.fun/native/160819027/uas/displayHistory_protectCare50.php"
         val stringRequest = object : StringRequest(
@@ -50,16 +49,20 @@ class HistoryFragment : Fragment() {
                         val playObj = data.getJSONObject(i)
                         with (playObj){
                             val history = History(
-                                getString("code_place"),
+                                getString("namePlace"),
                                 getString("check_in"),
                                 getString("check_out"),
                                 getString("vaccine")
                             )
-                            GlobalData.history.add(history)
+                            newHistory.add(history)
+                            //GlobalData.history.add(history)
                         }
                     }
-                    Log.d("playlistcheck", GlobalData.history.toString())
-                    updateList()
+                    Log.d("historyCheck", GlobalData.history.toString())
+                    if (newHistory != GlobalData.history){
+                        GlobalData.history = newHistory
+                        updateList()
+                    }
                 }
             },
             Response.ErrorListener {
@@ -71,6 +74,13 @@ class HistoryFragment : Fragment() {
             }
         }
         queue.add(stringRequest)
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_history, container, false)
         return view
     }
 
@@ -84,15 +94,6 @@ class HistoryFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HistoryFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
             HistoryFragment().apply {
