@@ -35,6 +35,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="Name : "
+                android:textAppearance="@style/subtitle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textProfileTitle" />
 
@@ -44,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Number of vaccination doses :"
+                android:textAppearance="@style/subtitle"
                 app:layout_constraintStart_toStartOf="@+id/textLabelName"
                 app:layout_constraintTop_toBottomOf="@+id/textLabelName" />
 
@@ -53,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="fullName"
+                android:textAppearance="@style/subtitle"
                 app:layout_constraintStart_toEndOf="@+id/textLabelName"
                 app:layout_constraintTop_toTopOf="@+id/textLabelName" />
 
@@ -62,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Number"
+                android:textAppearance="@style/subtitle"
                 app:layout_constraintStart_toEndOf="@+id/textLabelVaccine"
                 app:layout_constraintTop_toTopOf="@+id/textLabelVaccine" />
 

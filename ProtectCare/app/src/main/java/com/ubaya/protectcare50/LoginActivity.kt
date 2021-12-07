@@ -1,10 +1,12 @@
 package com.ubaya.protectcare50
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
@@ -57,5 +59,17 @@ class LoginActivity : AppCompatActivity() {
                 queue.add(stringRequest)
             }
         }
+    }
+    override fun onBackPressed() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Quit ProtectCare50")
+        builder.setMessage("Are you sure you want to leave this application?")
+        builder.setPositiveButton("Quit", DialogInterface.OnClickListener { dialogInterface, i ->
+            finish()
+        })
+        builder.setNegativeButton("Cancel",null)
+        builder.create().show()
+
+
     }
 }

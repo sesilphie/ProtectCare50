@@ -1,5 +1,6 @@
 package com.ubaya.protectcare50
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import kotlinx.android.synthetic.main.card_history.view.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 
 
@@ -36,10 +39,20 @@ class ProfileFragment : Fragment() {
         view.textVaccineDoses.text = vaccine_doses
 
         view.fabLogOut.setOnClickListener {
-            activity?.finish()
+
+
+            val builder = AlertDialog.Builder(view.context)
+            builder.setTitle("Log Out ProtectCare50")
+            builder.setMessage("Do you want to log out from ProtectCare?")
+            builder.setPositiveButton("Log out", DialogInterface.OnClickListener { dialogInterface, i ->
+                activity?.finish()
+            })
+            builder.setNegativeButton("Cancel",null)
+            builder.create().show()
         }
         return view
     }
+
 
     companion object {
         @JvmStatic

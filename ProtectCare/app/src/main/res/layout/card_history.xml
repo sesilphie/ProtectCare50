@@ -33,6 +33,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
                 android:text="Universitas Surabaya"
+                android:textAppearance="@style/subtitle"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Check In : "
+                android:textAppearance="@style/body"
                 app:layout_constraintStart_toStartOf="@+id/textPlaceCard"
                 app:layout_constraintTop_toBottomOf="@+id/textPlaceCard" />
 
@@ -53,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Check Out : "
+                android:textAppearance="@style/body"
                 app:layout_constraintStart_toStartOf="@+id/textlabelCheckInCard"
                 app:layout_constraintTop_toBottomOf="@+id/textlabelCheckInCard" />
 
@@ -62,6 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Monday, 2021-11-11 17:08"
+                android:textAppearance="@style/body"
                 app:layout_constraintStart_toEndOf="@+id/textlabelCheckInCard"
                 app:layout_constraintTop_toTopOf="@+id/textlabelCheckInCard" />
 
@@ -71,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Monday, 2021-11-11 17:08"
+                android:textAppearance="@style/body"
                 app:layout_constraintStart_toEndOf="@+id/textLabelCheckOutCard"
                 app:layout_constraintTop_toTopOf="@+id/textLabelCheckOutCard" />
         </androidx.constraintlayout.widget.ConstraintLayout>
