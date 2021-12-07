@@ -39,12 +39,12 @@ class ProfileFragment : Fragment() {
         view.textVaccineDoses.text = vaccine_doses
 
         view.fabLogOut.setOnClickListener {
-
-
             val builder = AlertDialog.Builder(view.context)
-            builder.setTitle("Log Out ProtectCare50")
+            builder.setTitle("Log Out")
             builder.setMessage("Do you want to log out from ProtectCare?")
             builder.setPositiveButton("Log out", DialogInterface.OnClickListener { dialogInterface, i ->
+                val intent = Intent(activity, LoginActivity::class.java)
+                activity?.startActivity(intent)
                 activity?.finish()
             })
             builder.setNegativeButton("Cancel",null)

@@ -55,14 +55,13 @@ class HistoryFragment : Fragment() {
                                 getString("vaccine")
                             )
                             newHistory.add(history)
-                            //GlobalData.history.add(history)
                         }
                     }
                     Log.d("historyCheck", GlobalData.history.toString())
                     if (newHistory != GlobalData.history){
                         GlobalData.history = newHistory
-                        updateList()
                     }
+                    updateList()
                 }
             },
             Response.ErrorListener {

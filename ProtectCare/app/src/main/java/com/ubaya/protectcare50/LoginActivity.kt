@@ -1,5 +1,6 @@
 package com.ubaya.protectcare50
 
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -15,13 +16,34 @@ import kotlinx.android.synthetic.main.activity_login.*
 import org.json.JSONObject
 
 class LoginActivity : AppCompatActivity() {
+    companion object{
+        val SHARED_USERNAME = "SHARED_USERNAME"
+        val SHARED_PASSWORD = "SHARED_PASSWORD"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        //Retrieve the saved Username and Password
+        val sharedName = packageName
+        val shared = getSharedPreferences(sharedName, Context.MODE_PRIVATE)
+        val username_saved = shared.getString(SHARED_USERNAME, null)
+        val password_saved = shared.getString(SHARED_PASSWORD, null)
+
+        if (username_saved != null && password_saved != null){
+            textInputUsername.setText(username_saved)
+            textInputPassword.setText(password_saved)
+        }
+
         buttonLogin.setOnClickListener {
             val username = textInputUsername.text.toString()
             val password = textInputPassword.text.toString()
+
+            //Save to SharedPreferences
+            val editor = shared.edit()
+            editor.putString(SHARED_USERNAME, username)
+            editor.putString(SHARED_PASSWORD, password)
+            editor.apply()
 
             if (username == ""){
                 Toast.makeText(this, "Please input Username", Toast.LENGTH_SHORT).show()
@@ -44,6 +66,7 @@ class LoginActivity : AppCompatActivity() {
                             Toast.makeText(this, "LOGIN SUCCESS", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
+                            finish()
                         }else{
                             Toast.makeText(this, "LOGIN FAILED. Username or Password is wrong", Toast.LENGTH_SHORT).show()
                         }
@@ -69,7 +92,5 @@ class LoginActivity : AppCompatActivity() {
         })
         builder.setNegativeButton("Cancel",null)
         builder.create().show()
-
-
     }
 }

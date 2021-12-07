@@ -1,5 +1,6 @@
 package com.ubaya.protectcare50
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
@@ -122,7 +124,16 @@ class CheckInFragment : Fragment() {
                     queue.add(stringRequest)
                 }
                 else{
-                    Toast.makeText(context, "Vaccine doses must be at least 1 time", Toast.LENGTH_SHORT).show()
+                    val builder = AlertDialog.Builder(view.context)
+                    builder.setTitle("Vaccine Doses Alert")
+                    builder.setMessage("Vaccine doses must be at least 1 time. See Vaccine Location")
+                    builder.setPositiveButton("See Location", DialogInterface.OnClickListener { dialogInterface, i ->
+                        val intent = Intent(activity, GetVaccineActivity::class.java)
+                        activity?.startActivity(intent)
+                    })
+                    builder.setNegativeButton("Cancel",null)
+                    builder.create().show()
+                    //Toast.makeText(context, "Vaccine doses must be at least 1 time", Toast.LENGTH_SHORT).show()
                 }
             }
 
