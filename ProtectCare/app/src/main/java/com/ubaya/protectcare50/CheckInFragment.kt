@@ -84,9 +84,6 @@ class CheckInFragment : Fragment() {
 
         view.buttonCheckIn.setOnClickListener {
             val inputCode = textInputCode.text.toString()
-            val formatter = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-            val date = Calendar.getInstance().time
-            val currentDate = formatter.format(date)
             if (inputCode == ""){
                 Toast.makeText(context, "Please input Unique Code", Toast.LENGTH_SHORT).show()
             }else{
@@ -118,7 +115,7 @@ class CheckInFragment : Fragment() {
                     ){
                         override fun getParams(): MutableMap<String, String> {
                             return hashMapOf("code" to inputCode, "username" to GlobalData.user.username,
-                                "vaccine" to GlobalData.user.vaccine_doses,"checkIn" to currentDate)
+                                "vaccine" to GlobalData.user.vaccine_doses)
                         }
                     }
                     queue.add(stringRequest)
@@ -126,21 +123,18 @@ class CheckInFragment : Fragment() {
                 else{
                     val builder = AlertDialog.Builder(view.context)
                     builder.setTitle("Vaccine Doses Alert")
-                    builder.setMessage("Vaccine doses must be at least 1 time. See Vaccine Location")
+                    builder.setMessage("Vaccine doses must be at least 1 time. \nSee Vaccine Location")
                     builder.setPositiveButton("See Location", DialogInterface.OnClickListener { dialogInterface, i ->
                         val intent = Intent(activity, GetVaccineActivity::class.java)
                         activity?.startActivity(intent)
                     })
                     builder.setNegativeButton("Cancel",null)
                     builder.create().show()
-                    //Toast.makeText(context, "Vaccine doses must be at least 1 time", Toast.LENGTH_SHORT).show()
                 }
             }
 
         }
         return view
-
-
     }
 
     companion object {

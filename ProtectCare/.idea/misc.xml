@@ -4,9 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/activity_get_vaccine.xml" value="0.22" />
         <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/activity_main.xml" value="0.1802536231884058" />
-        <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/card_history.xml" value="0.33" />
         <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/fragment_check_in.xml" value="0.18" />
         <entry key="..\:/UNIV/SEM 5/NMP/ProtectCare/ProtectCare/app/src/main/res/layout/fragment_check_out.xml" value="0.25" />
@@ -22,11 +20,12 @@
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/activity_get_vaccine.xml" value="0.25416666666666665" />
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/activity_login.xml" value="0.4" />
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/card_history.xml" value="0.536" />
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/card_vaccine.xml" value="0.536" />
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/fragment_check_in.xml" value="0.4" />
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/fragment_check_out.xml" value="0.25416666666666665" />
-        <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/fragment_history.xml" value="0.13020833333333334" />
+        <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/fragment_history.xml" value="0.264" />
         <entry key="..\:/strix/Documents/Kuliah/SEMESTER 5/Native Mobile Programming/UAS/ProtectCare50/ProtectCare/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
       </map>
     </option>

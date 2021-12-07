@@ -91,7 +91,7 @@ class LoginActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Quit ProtectCare50")
         builder.setMessage("Are you sure you want to leave this application?")
-        builder.setPositiveButton("Yes, I want to quit", DialogInterface.OnClickListener { dialogInterface, i ->
+        builder.setPositiveButton("Quit", DialogInterface.OnClickListener { dialogInterface, i ->
             finish()
         })
         builder.setNegativeButton("Cancel",null)

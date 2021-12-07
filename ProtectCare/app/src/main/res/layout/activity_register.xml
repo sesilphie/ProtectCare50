@@ -67,6 +67,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textUsername">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputFullName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/subtitle" />
@@ -102,16 +103,17 @@
                 app:layout_constraintTop_toTopOf="@+id/textVaccineRegister">
 
                 <RadioButton
+                    android:id="@+id/radioButton0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="0" />
+
+                <RadioButton
                     android:id="@+id/radioButton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1" />
-
-                <RadioButton
-                    android:id="@+id/radioButton0"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
@@ -177,6 +179,7 @@
                 android:layout_marginTop="12dp"
                 android:text="REGISTER"
                 android:textAppearance="@style/subtitle"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/radioVaccine"
                 app:layout_constraintStart_toStartOf="@+id/textVaccineRegister"
                 app:layout_constraintTop_toBottomOf="@+id/radioVaccine" />
