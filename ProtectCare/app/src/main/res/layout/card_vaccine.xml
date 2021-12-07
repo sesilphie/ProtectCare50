@@ -12,9 +12,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:elevation="10dp"
         app:cardBackgroundColor="#FDACCF"
         app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,14 +28,16 @@
 
             <TextView
                 android:id="@+id/textVaccinePlace"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
                 android:text="Puskesmas Mojo Surabaya"
-                android:textAppearance="@style/subtitle"
+                android:textAppearance="@style/heading1"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,30 +45,27 @@
                 android:id="@+id/textVaccineAddress"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="Mojo Klanggru Wetan II No.11, Mojo, Kec. Gubeng, Kota SBY, Jawa Timur 60285"
                 android:textAlignment="center"
                 android:textAppearance="@style/body"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/textVaccinePlace"
+                app:layout_constraintEnd_toEndOf="@+id/textVaccine"
                 app:layout_constraintStart_toStartOf="@+id/textVaccinePlace"
-                app:layout_constraintTop_toBottomOf="@+id/textVaccinePlace" />
+                app:layout_constraintTop_toBottomOf="@+id/textVaccine" />
 
             <TextView
                 android:id="@+id/textVaccine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Sinovac"
-                android:textAppearance="@style/heading1"
+                android:textAppearance="@style/subtitle"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textVaccinePlace"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="@+id/textVaccinePlace"
+                app:layout_constraintTop_toBottomOf="@+id/textVaccinePlace" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
