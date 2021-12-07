@@ -56,7 +56,7 @@ class RegisterActivity : AppCompatActivity() {
                                 with (builder)
                                 {
                                     setTitle("Register")
-                                    setMessage("Register User Successfully")
+                                    setMessage("Register User Successful")
                                     setPositiveButton("OK"){dialogInterface, i ->
 
                                         finish()
@@ -80,7 +80,7 @@ class RegisterActivity : AppCompatActivity() {
                     }
                     queue.add(stringRequest)
                 } else{
-                    Toast.makeText(this, "Password and Confirm Password are not match", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Password and Confirm Password are not match, Please make sure the Password and Confirm Password are the same", Toast.LENGTH_SHORT).show()
                 }
             }
         }
