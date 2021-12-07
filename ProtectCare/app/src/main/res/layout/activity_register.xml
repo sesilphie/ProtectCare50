@@ -134,13 +134,13 @@
                 app:hintEnabled="true"
                 app:layout_constraintEnd_toEndOf="@+id/textFullname"
                 app:layout_constraintStart_toStartOf="@+id/textFullname"
-                app:layout_constraintTop_toBottomOf="@+id/textFullname"
-                app:passwordToggleEnabled="true">
+                app:layout_constraintTop_toBottomOf="@+id/textFullname">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textInputPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textPassword"
                     android:textAppearance="@style/subtitle" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -157,13 +157,13 @@
                 app:hintEnabled="true"
                 app:layout_constraintEnd_toEndOf="@+id/textPassword"
                 app:layout_constraintStart_toStartOf="@+id/textPassword"
-                app:layout_constraintTop_toBottomOf="@+id/textPassword"
-                app:passwordToggleEnabled="true">
+                app:layout_constraintTop_toBottomOf="@+id/textPassword">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textInputConfirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textPassword"
                     android:textAppearance="@style/subtitle" />
 
             </com.google.android.material.textfield.TextInputLayout>
